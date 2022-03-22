@@ -1,0 +1,227 @@
+{% load static %}
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600|Roboto:300,400,500&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="{% static './css/owl.carousel.min.css' %}">
+
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="{% static './css/style.css' %} ">
+
+    <title>DIS || Home</title>
+</head>
+
+<body>
+    <header>
+        <div class=" container">
+            <img src="{% static './assets/logo.jpg' %}">
+            <nav class="navbar navbar-expand-lg">
+                <!-- <a class="navbar-brand" href="#">Brand name</a>
+                <img src="" alt=""> -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">about</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'Appoint doctor' %}">appoint doctor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Patient Reports</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">health tips</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">mobile app</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index/login.htm">login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index/signup.html">signup</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div id="appoint-doc">
+        <nav>
+            <ul class="nav container">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false">Availability</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Available today</a>
+                        <a class="dropdown-item" href="#">Available any day</a>
+                        <a class="dropdown-item" href="#">Available in next 3 day</a>
+                        <a class="dropdown-item" href="#">Available next weekend</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Sort by</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <section class="list-doctors">
+            <div class="container">
+                <p class="res-num">273 matches found for: <span class="res-name">Dentist in Kathmandu</span></p>
+                <div class="row">
+                 {% for d in docs %}
+                    <div class="col-md-9">
+                        <div class="list-box">
+                            <div class="doc-photo">
+                                <img src="{{d.img.url}}">
+                            </div>
+                            <div class="doc-intro">
+                                <h4>
+                                    <a href="#">{{d.name}}</a>
+                                </h4>
+                                <p>{{d.qualification}}</p>
+                                <p>{{d.experience}} years experience overall</p>
+                                <p><span class="bg-info">Allopath</span>{{d.job}}</p>
+                                <a href="#">View profile</a>
+                            </div>
+                            <div class="more-info">
+                                <p> <i class="icon icon-like"></i>{{d.like}}</p>
+                                <p> <i class="icon icon-comment"></i>{{d.patient_experience}} Patient Experience</p>
+                                <p> <i class="icon icon-location"></i>{{d.address}}</p>
+                                <p> <i class="icon icon-time"></i>{{d.available}}</p>
+                                <a href="#">Show more details</a>
+                                <button class="btn btn-primary"> <img src="{% static './assets/small-img/high-voltage.png' %}" alt="">
+                                    Book
+                                    Appointment</button>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <div class="col-md-9">
+                        <div class="list-box">
+                            <div class="doc-photo">
+                                <img src="{% static './assets/logo/d1.jpg ' %}">
+                            </div>
+                            <div class="doc-intro">
+                                <h4>
+                                    <a href="#">Dr. Karki</a>
+                                </h4>
+                                <p>BDS</p>
+                                <p>9 years experience overall</p>
+                                <p><span class="bg-info">Allopath</span> Dentist</p>
+                                <a href="#">View profile</a>
+                            </div>
+                            <div class="more-info">
+                                <p> <i class="icon icon-like"></i> 89</p>
+                                <p> <i class="icon icon-comment"></i>891 Patient Experience</p>
+                                <p> <i class="icon icon-location"></i>Baneshwor , Kathmandu</p>
+                                <p> <i class="icon icon-time"></i>Available today</p>
+                                <a href="#">Show more details</a>
+                                <button class="btn btn-primary"> <img src="{% static './assets/small-img/high-voltage.png' %}" alt="">
+                                    Book
+                                    Appointment</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Dapic</h5>
+                    <ul>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">blog</a></li>
+                        <li><a href="#">career</a></li>
+                        <li><a href="#">contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>For patients</h5>
+                    <ul>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">blog</a></li>
+                        <li><a href="#">career</a></li>
+                        <li><a href="#">contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>more</h5>
+                    <ul>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">blog</a></li>
+                        <li><a href="#">career</a></li>
+                        <li><a href="#">contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Social</h5>
+                    <ul>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">blog</a></li>
+                        <li><a href="#">career</a></li>
+                        <li><a href="#">contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <!-- owl carousel -->
+    <script src="{% static './js/owl.carousel.min.js' %}"></script>
+    <!-- custom script -->
+    <script src="{% static './js/main.js' %}"></script>
+</body>
+
+</html>

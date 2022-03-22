@@ -1,0 +1,475 @@
+$link-color: #000;
+$background-even: #dddddd45;
+
+a {
+    text-decoration: none;
+    color: $link-color;
+    text-transform: capitalize;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    border-radius: 2px;
+
+    .dropdown-item {
+        font-size: 12px;
+    }
+
+    .dropdown-item:hover {
+        background: #e0e0e5;
+    }
+}
+
+// ------------- header---------------
+
+header {
+    //background: #828282;
+    font-family: "Oswald", sans-serif;
+
+    .navbar-nav {
+        margin: auto;
+
+        .nav-item {
+            margin: 0 10px;
+            font-weight: 400;
+            border-right: 1px solid #dededd;
+        }
+    }
+
+    .modal-body {
+        form {
+            button {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// ------------- banner --------------
+.banner {
+    .carousel-item {
+        img {
+            height: 500px;
+            //width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+// ------------ services -----------------
+.services {
+    margin: 2rem 0;
+
+    h1 {
+        font-size: 25px;
+        margin-bottom: 1.5rem;
+    }
+
+    .slider {
+        .card {
+            margin-right: 20px;
+            border: none;
+
+            img {
+                border-radius: .25rem;
+                transition: all ease-in .2s;
+            }
+
+            img:hover {
+                box-shadow: 4px 3px 5px #826f6f;
+            }
+
+
+            .card-body {
+                text-align: left;
+                padding: 0;
+
+                h6 {
+                    margin-top: 0.75rem;
+                    font-weight: 500 !important;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+// ------------ better-health ------------------
+.better-health {
+    margin: 2rem 0;
+
+
+    h1 {
+        border-top: 1px solid #dddd;
+        font-size: 25px;
+        margin-bottom: 1.5rem;
+        padding-top: 2rem;
+    }
+
+    img {
+        border-radius: .25rem;
+        width: 100%;
+        transition: all ease-in-out .2s;
+    }
+
+    img:hover {
+        box-shadow: 4px 3px 5px #826f6f;
+    }
+}
+
+// -------- health articles -----------
+.health-article {
+    margin: 2rem 0;
+
+    .bt {
+        border-top: 1px solid #ddd;
+    }
+
+    .box {
+        width: 60%;
+        margin: auto;
+        padding-top: 10%;
+
+        h1 {
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+
+    .img-wrap {
+        display: flex;
+
+        .img-card {
+            margin-left: 20px;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 200px;
+                border-radius: .25rem;
+                transition: all ease-in-out .2s;
+            }
+
+            img:hover {
+                box-shadow: 4px 3px 5px #826f6f;
+            }
+
+            .card-link {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                z-index: 1;
+            }
+
+            .text-muted {
+                font-weight: normal;
+                text-transform: uppercase;
+                margin-top: 5px;
+            }
+
+            p {
+                margin-bottom: 2px;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+// ------------ banner mid --------------
+.banner-mid {
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+// ----------- testimonials ----------
+.testimonials {
+    margin: 2rem 0;
+    padding: 2rem 0;
+    background: $background-even;
+
+    .top {
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            font-family: "Roboto", sans-serif;
+        }
+
+        h3 {
+            text-align: center;
+            text-transform: capitalize;
+            font-size: 20px;
+            font-family: "Oswald", sans-serif;
+        }
+    }
+}
+
+.testimonial {
+    padding: 20px 20px 20px 90px;
+    margin: 10px 20px 50px 55px;
+    border-left: 2px solid #ae483a;
+    position: relative;
+}
+
+.testimonial:after {
+    content: "";
+    border-bottom: 25px solid #ae483a;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    position: absolute;
+    bottom: -24px;
+    left: -26px;
+}
+
+.testimonial .pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #ae483a;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: -50px;
+}
+
+.testimonial .pic img {
+    width: 100%;
+    height: auto;
+}
+
+.testimonial .title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #71334a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 7px 0;
+}
+
+.testimonial .post {
+    display: block;
+    font-size: 15px;
+    color: #ae483a;
+    text-transform: capitalize;
+}
+
+.testimonial .description {
+    font-size: 15px;
+    color: #ab9c99;
+    line-height: 28px;
+}
+
+// ----------- media queries ---------
+.owl-theme .owl-controls {
+    margin-top: 10px;
+}
+
+.owl-theme .owl-controls .owl-page span {
+    width: 35px;
+    height: 15px;
+    border-radius: 0;
+    background: #71334a;
+    opacity: 0.8;
+    transition: all 0.3s ease 0s;
+}
+
+.owl-theme .owl-controls .owl-page.active span {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #ae483a;
+}
+
+@media only screen and (max-width: 479px) {
+    .testimonial {
+        padding: 20px 0 20px 60px;
+        margin: 10px 20px 50px 50px;
+    }
+
+    .testimonial .title {
+        font-size: 20px;
+    }
+}
+
+// ------------- page appoint doctor css ---------------
+#appoint-doc {
+    nav {
+        background: #28328c;
+        padding: .5rem 0;
+
+        .nav-item {
+            background: #434ea2;
+            margin-left: 20px;
+            font-size: 14px;
+            font-weight: 500;
+
+            a {
+                color: #fff;
+            }
+
+            .dropdown-menu {
+                a {
+                    color: #000;
+                }
+            }
+        }
+
+    }
+
+    .res-num {
+        font-size: 13px;
+        font-weight: normal;
+
+        .res-name {
+            font-size: 14px;
+            font-weight: 500;
+            color: #826f6f;
+        }
+    }
+}
+
+// ----------------- doctors list ---------------
+.list-doctors {
+    background: #F0F0F5;
+    padding: 2rem 0;
+
+    .list-box:hover {
+        box-shadow: 1px 1px 5px #888;
+    }
+
+    .list-box {
+        background: #fff;
+        border: 1px solid #ddd;
+        padding: 1rem;
+        display: grid;
+        margin: 10px 0;
+        grid-template-columns: 110px 1fr 225px;
+        transition: all ease-in-out .25s;
+        //justify-content: space-between;
+
+        .doc-intro {
+            h4 {
+                a {
+                    font-size: 20px;
+                }
+            }
+
+            p {
+                margin-bottom: 2px;
+                font-weight: 400;
+                font-size: 14px;
+            }
+
+            p:nth-child(3) {
+                margin-bottom: 15px;
+
+            }
+
+            .bg-info {
+                padding: 2px 5px;
+                color: #000;
+                background: #dddddd !important;
+                margin-right: 5px;
+            }
+
+            a {
+                text-transform: none;
+                font-size: 12px;
+                font-weight: 500;
+                color: #434ea2;
+            }
+        }
+
+        .more-info {
+            p {
+                margin-bottom: 5px;
+                font-size: 15px;
+            }
+
+            button {
+                margin-top: 30px;
+                padding: .375rem 1.75rem;
+            }
+
+            a {
+                text-transform: none;
+                color: #ae483a;
+                font-size: 15px;
+                margin-left: 28px;
+            }
+        }
+    }
+}
+
+
+// ---------------------- footer -------------------
+footer {
+    background: #28328c;
+    color: #fff;
+    padding: 2rem 0;
+
+    a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 14px;
+    }
+
+
+
+    ul {
+        padding: 0;
+
+        li {
+            list-style: none;
+
+            a:hover {
+                text-decoration: underline;
+                color: #fff;
+
+            }
+        }
+    }
+
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat !important;
+    display: inline-block;
+    margin-right: 8px;
+    opacity: 0.8;
+    vertical-align: middle;
+}
+
+.icon-like {
+    background: url(../assets/small-img/like.png);
+}
+
+.icon-time {
+    background-image: url(../assets/small-img/clock.png);
+}
+
+.icon-date {
+    background: url(../assets/small-img/calendar.png);
+}
+
+.icon-location {
+    background: url(../assets/small-img/placeholder.png);
+}
+
+.icon-comment {
+    background: url(../assets/small-img/comment.png);
+}
